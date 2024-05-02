@@ -16,7 +16,7 @@ namespace AdemShop.Catolog.Services.ProductDetailServices
         {
             var client = new MongoClient(_databaseSettings.ConnectionString);
             var database = client.GetDatabase(_databaseSettings.DatabaseName);
-            _productDetail = database.GetCollection<ProductDetail>(_databaseSettings.CategoryCollectionName);
+            _productDetail = database.GetCollection<ProductDetail>(_databaseSettings.ProductDetailCollectionName);
             _mapper = mapper;
         }
         public async Task CreateProductDetailAsync(CreateProductDetailDto createProductDetailDto)

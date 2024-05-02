@@ -7,11 +7,11 @@ namespace AdemShop.Catolog.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProductcController : ControllerBase
+    public class ProductController : ControllerBase
     {
         private readonly IProductService _productService;
 
-        public ProductcController(IProductService ProductService)
+        public ProductController(IProductService ProductService)
         {
             _productService = ProductService;
         }
