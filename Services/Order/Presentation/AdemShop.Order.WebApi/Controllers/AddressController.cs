@@ -31,19 +31,19 @@ namespace AdemShop.Order.WebApi.Controllers
         public async Task<IActionResult> CreateAddress(CreateAddressCommand createCommand)
         {
             await _mediator.Send(createCommand);
-            return Ok("Adres başarıyla eklendi");
+            return Ok("Adres bilgisi başarıyla eklendi");
         }
         [HttpDelete]
         public async Task<IActionResult> DeleteAddress(Guid id)
         {
             await _mediator.Send(new DeleteAddressCommand(id));
-            return Ok("Adres başarıyla silindi");
+            return Ok("Adres bilgisi başarıyla silindi");
         }
         [HttpPut]
         public async Task<IActionResult> UpdateAddress(UpdateAddressCommand updateCommand)
         {
             await _mediator.Send(updateCommand);
-            return Ok("Adres başarıyla güncellendi");
+            return Ok("Adres bilgisi başarıyla güncellendi");
         }
     }
 }
