@@ -18,9 +18,9 @@ namespace AdemShop.Order.WebApi.Controllers
         }
 
         [HttpGet("{orderingId}")]
-        public async Task<IActionResult> GetOrdering(Guid id) 
+        public async Task<IActionResult> GetOrdering(Guid orderingId) 
         {
-            var data = await _mediator.Send(new GetOrderingQuery(id));
+            var data = await _mediator.Send(new GetOrderingQuery(orderingId));
             return Ok(data);
         }
 
@@ -36,7 +36,7 @@ namespace AdemShop.Order.WebApi.Controllers
             await _mediator.Send(createCommand);
             return Ok("Sipariş başarıyla eklendi");
         }
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteOrdering(Guid id)
         {
             await _mediator.Send(new DeleteOrderingCommand(id));

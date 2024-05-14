@@ -1,15 +1,10 @@
-﻿using AdemShop.Order.Application.Features.CQRS.Queries.AddressQuery;
+﻿using AdemShop.Domain.Entities;
+using AdemShop.Order.Application.Features.CQRS.Queries.AddressQuery;
 using AdemShop.Order.Application.Features.CQRS.Queries.OrderDetailQuery;
 using AdemShop.Order.Application.Features.CQRS.Results.AddressResults;
 using AdemShop.Order.Application.Features.CQRS.Results.OrderDetailResult;
 using AdemShop.Order.Application.Interfaces;
-using AdemShop.Order.Domain.Entitites;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AdemShop.Order.Application.Features.CQRS.Handlers.OrderDetailHandler
 {

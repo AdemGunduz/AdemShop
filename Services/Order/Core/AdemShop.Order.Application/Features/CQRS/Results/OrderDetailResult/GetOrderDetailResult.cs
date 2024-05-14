@@ -1,9 +1,6 @@
-﻿using AdemShop.Order.Domain.Entitites;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+
+using AdemShop.Domain.Entities;
 
 namespace AdemShop.Order.Application.Features.CQRS.Results.OrderDetailResult
 {

@@ -1,12 +1,8 @@
 ﻿using AdemShop.Order.Application.Interfaces;
-using AdemShop.Order.Persistence.Context;
+using Domain.Context;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace AdemShop.Order.Persistence.Repositories
 {

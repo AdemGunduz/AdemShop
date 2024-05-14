@@ -1,10 +1,10 @@
-using AdemShop.Discount.Context;
 using AdemShop.Discount.Services;
+using Domain.Context;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddTransient<DapperContext>();
+builder.Services.AddTransient<AdmContext>();
 builder.Services.AddTransient<IDiscountService, DiscountService>();
 
 

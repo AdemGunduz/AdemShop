@@ -1,7 +1,7 @@
-﻿using AdemShop.Order.Application.Features.Mediator.Queries.OrderingQueries;
+﻿using AdemShop.Domain.Entities;
+using AdemShop.Order.Application.Features.Mediator.Queries.OrderingQueries;
 using AdemShop.Order.Application.Features.Mediator.Results;
 using AdemShop.Order.Application.Interfaces;
-using AdemShop.Order.Domain.Entitites;
 using MediatR;
 
 namespace AdemShop.Order.Application.Features.Mediator.Handlers.OrderingHandler

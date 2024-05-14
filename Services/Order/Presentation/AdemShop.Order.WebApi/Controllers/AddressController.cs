@@ -16,9 +16,9 @@ namespace AdemShop.Order.WebApi.Controllers
         }
 
         [HttpGet("{addressId}")]
-        public async Task<IActionResult> GetAddress(Guid id)
+        public async Task<IActionResult> GetAddress(Guid addressId)
         {
-            var data = await _mediator.Send(new GetAddressQuery(id));
+            var data = await _mediator.Send(new GetAddressQuery(addressId));
             return Ok(data);
         }
         [HttpGet]
@@ -33,7 +33,7 @@ namespace AdemShop.Order.WebApi.Controllers
             await _mediator.Send(createCommand);
             return Ok("Adres bilgisi başarıyla eklendi");
         }
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteAddress(Guid id)
         {
             await _mediator.Send(new DeleteAddressCommand(id));

@@ -1,4 +1,4 @@
-﻿namespace AdemShop.Discount.Entities
+﻿namespace AdemShop.Domain.Entities
 {
     public class Coupon
     {

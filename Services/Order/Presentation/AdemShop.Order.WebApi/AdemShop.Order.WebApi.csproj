@@ -11,8 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Shread\Domain\Domain.csproj" />
     <ProjectReference Include="..\..\Core\AdemShop.Order.Application\AdemShop.Order.Application.csproj" />
-    <ProjectReference Include="..\..\Core\AdemShop.Order.Domain\AdemShop.Order.Domain.csproj" />
     <ProjectReference Include="..\..\Infrastructure\AdemShop.Order.Persistence\AdemShop.Order.Persistence.csproj" />
   </ItemGroup>
 

@@ -22,10 +22,10 @@ namespace AdemShop.Order.WebApi.Controllers
             _mediator = mediator;
         }
 
-        [HttpGet("orderDetailId}")]
-        public async Task<IActionResult> Get(Guid id)
+        [HttpGet("{orderDetailId}")]
+        public async Task<IActionResult> Get(Guid orderDetailId)
         {
-            var data = await _mediator.Send(new GetOrderDetailQuery(id));
+            var data = await _mediator.Send(new GetOrderDetailQuery(orderDetailId));
             return Ok(data);
         }
         [HttpGet]
@@ -40,7 +40,7 @@ namespace AdemShop.Order.WebApi.Controllers
             await _mediator.Send(createCommand);
             return Ok("Sipariş detay başarıyla eklendi");
         }
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteOrderDetail(Guid id)
         {
             await _mediator.Send(new DeleteOrderDetailCommand(id));
